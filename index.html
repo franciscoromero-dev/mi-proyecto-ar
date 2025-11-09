@@ -2,18 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Mi modelo 3D en AR</title>
+    <title>AR con mi modelo GLB</title>
+    <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <!-- AR.js para A-Frame -->
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
+    <!-- escena de AR -->
     <a-scene embedded arjs>
-      <!-- Cambia la ruta por el nombre de tu archivo 3D -->
+      <!-- tu modelo 3D -->
       <a-entity
-        gltf-model="url(./dog.glb)"
-        scale="0.5 0.5 0.5"
+        gltf-model="url(./modelos/mi-modelo.glb)"
+        scale="0.3 0.3 0.3"
         position="0 0 0">
       </a-entity>
+
+      <!-- cámara con marcador hiro -->
       <a-marker-camera preset="hiro"></a-marker-camera>
     </a-scene>
   </body>
